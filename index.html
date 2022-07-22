@@ -1,0 +1,27 @@
+---
+layout: default
+image: /assets/card.png
+title: Notion Icons 5.0
+---
+{% include intro.html %}
+{% include search.html %}
+{% include filter.html %}
+  <div class="px-3">
+    <ul class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list grid" id="ico">
+        {% assign iconss = site.icons | sort: 'title'  %}
+        {% for icon in iconss %}
+      <li class="col mb-4" id="ic">
+        <div class="item d-block p-3 text-dark text-decoration-none" style="cursor: pointer;" id="{{ icon.title }}" onclick="downloadIcon(this)">
+          <div class="ico text-center rounded">
+           <div class="icon-preview p-2">{{ icon.content }}</div>
+          </div>
+        </div>
+        <span style="display: none;">{{ icon.tags }}</span>
+        <button class="btn cpybtn text-break name" style="margin-top: -3px; width: 100%; border-radius: 0 0 .25rem .25rem;" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to Copy" onclick="copyToClipboard(this.parentNode)">{{ icon.title }}</button>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  

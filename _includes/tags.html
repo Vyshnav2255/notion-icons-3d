@@ -1,0 +1,50 @@
+<!-- Collect tags from all posts -->
+{%- assign tags = blank -%}
+{%- for icon in site.icons -%}
+  {%- assign icon_tags = icon.tags | join:'|' | append:'|' -%}
+  {%- if icon_tags != '|' -%}
+    {%- assign tags = tags | append:icon_tags -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign tags = tags | split:'|' | uniq | sort -%}
+
+<!-- List tags & related posts -->
+{% for tag in tags %}
+<div class="p-3">
+  <h4 id="{{ tag | slugify }}">{{ tag }}</h4>
+  <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
+    {% assign iconss = site.icons | sort: 'title'  %}
+    {% for icon in iconss %}
+    {%- if icon.tags contains tag -%}
+    <li class="col mb-4">
+      <a class="item d-block p-1 text-dark text-decoration-none" href="{{ icon.url }}">
+        <div class="ico mb-2 text-center rounded">
+         <img class="icon-preview p-2" style="height: 5em; width: 5em;" src="{{ icon.image }}" alt="{{ icon.title }}"/>
+        </div>
+      </a>
+      <button class="btn cpybtn text-break name" style="margin-top: -3px; width: 100%; border-radius: 0 0 .25rem .25rem;" data-clipboard-text="{{ icon.image | prepend: site.baseurl | prepend: site.url }}" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to Copy">{{ icon.title }}</button>
+    </li>
+    {%- endif -%}
+  {% endfor %}
+  </ol>
+</div>
+{% endfor %}
+
+<script src="/assets/dist/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script>
+  var clipboard = new ClipboardJS('.cpybtn');
+
+  clipboard.on('success', function (e) {
+    console.log(e);
+    $(e.trigger).text("✅ Copied!");
+    e.clearSelection();
+    setTimeout(function() {
+    $(e.trigger).text("Copy");
+  }, 2500);
+  });
+
+  clipboard.on('error', function (e) {
+    console.log(e);
+  });
+</script>

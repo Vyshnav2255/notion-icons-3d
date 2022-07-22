@@ -1,0 +1,42 @@
+### Site Settings ###
+title               : Notion Icons 3D
+description         : >-                               # >- means to ignore newlines until "url:"
+                      Minimal and Beautiful icons for your Notion Workspace
+
+url                 : "https://notion3d.vyshnav.xyz"                               # base hostname & protocol for your site (e.g. http://example.com)
+baseurl             : ""                    # subpath of your site (e.g. /blog) [IMPORTANT: use "" if your are hosting at https://username.github.io directly]
+repository          : Vyshnav2255/notion-icons-v5
+
+### Author Info ###
+author:
+  name              : Vyshnav Gangadharan
+  twitter           : vyshnav_xyz
+  dribbble          : vyshnav_
+  github            : Vyshnav2255
+
+
+
+### Collections ###
+collections:
+  icons:
+    output: true
+    permalink: /icons/:name
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "icons"
+    values:
+      layout: "none"
+
+sass:
+    style: compressed
+
+### Exclude from processing ###
+exclude:
+- README.md
+- CONTRIBUTING.md
+- LICENSE
+- Gemfile
+- Gemfile.lock

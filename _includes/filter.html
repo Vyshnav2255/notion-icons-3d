@@ -1,0 +1,42 @@
+{%- assign tags = blank -%}
+{%- for icon in site.icons -%}
+  {%- assign icon_tags = icon.tags | join:'|' | append:'|' -%}
+  {%- if icon_tags != '|' -%}
+    {%- assign tags = tags | append:icon_tags -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign tags = tags | split:'|' | uniq | sort -%}
+
+<div class="px-3 button-group filter-button-group" style="display: flex; justify-content: center; align-items: center;">
+  <a onclick="changeColor('#000000')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #000000;"></span>
+  </a>
+  <a onclick="changeColor('#F82125')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #F82125;"></span>
+  </a>
+  <a onclick="changeColor('#F37500')" id="#F37500" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #F37500;"></span>
+  </a>
+  <a onclick="changeColor('#F5C700')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #F5C700;"></span>
+  </a>
+  <a onclick="changeColor('#00C59E')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #00C59E;"></span>
+  </a>
+  <a onclick="changeColor('#00B861')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #00B861;"></span>
+  </a>
+  <a onclick="changeColor('#0696DE')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #0696DE;"></span>
+  </a>
+  <a onclick="changeColor('#9C1CAE')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #9C1CAE;"></span>
+  </a>
+  <a onclick="changeColor('#BCC3C7')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #BCC3C7;"></span>
+  </a>
+  <a onclick="changeColor('#ffffff')" class="button text-decoration-none no-underline tag-item" style="cursor: pointer;">
+    <span class="circle-color" style="background-color: #ffffff;"></span>
+  </a>
+</div>
+

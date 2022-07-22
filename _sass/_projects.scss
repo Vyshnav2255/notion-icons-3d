@@ -1,0 +1,19 @@
+.item{
+    border: 1px solid #000000;
+    border-radius: .25rem .25rem 0 0;
+
+    &:hover{
+        box-shadow: black;
+    }
+}
+
+.name{
+    font-size: .8125rem;
+}
+
+.icon-preview{
+    svg{
+        width: 3em;
+        height: 3em;
+    }
+}

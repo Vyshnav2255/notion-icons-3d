@@ -1,0 +1,23 @@
+---
+layout: compress
+image: /assets/card.png
+---
+<!DOCTYPE html>
+
+<html lang="en" style="height: 100% !important;">
+
+{% include head.html %}
+
+<body style="display: flex !important; flex-direction: column !important; height: 100% !important;">
+
+  <main class="container" style="margin-top: 1rem !important; flex-shrink: 0 !important;">
+  {% include navbar.html %}
+  {{ content }}
+  </main>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+
+</body>
+
+</html>

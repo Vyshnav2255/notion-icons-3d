@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// Custom Fonts
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap');
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "variables",
+        "base",
+        "navbar",
+        "articles",
+        "projects",
+        "theme",
+        "theme-dark";
