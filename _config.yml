@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Notion Icons 3D
 description         : >-                               # >- means to ignore newlines until "url:"
-                      Minimal and Beautiful icons for your Notion Workspace
+                      Beautiful 3D icons for your Notion Workspace
 
 url                 : "https://notion3d.vyshnav.xyz"                               # base hostname & protocol for your site (e.g. http://example.com)
 baseurl             : ""                    # subpath of your site (e.g. /blog) [IMPORTANT: use "" if your are hosting at https://username.github.io directly]

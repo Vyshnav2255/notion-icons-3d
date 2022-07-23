@@ -48,15 +48,15 @@ $dark-900: #121212;
   border: 1px solid #ffffff !important;
 }
 .btn{
-  background-color: #4b2900;
-  border-color: #fff394;
-  color: #fff394;
+  background-color: #4d4d4d;
+  border-color: #ffffff;
+  color: #fff;
 
   svg{
-    fill: #fff394 !important;
+    fill: #fff !important;
   }
   &:hover{
-    box-shadow: 4px 4px 0 #fff394;
+    box-shadow: 4px 4px 0 #ffffff;
     }
 }
 

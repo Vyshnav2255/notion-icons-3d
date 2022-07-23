@@ -5,7 +5,6 @@ title: Notion Icons 5.0
 ---
 {% include intro.html %}
 {% include search.html %}
-{% include filter.html %}
   <div class="px-3">
     <ul class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list grid" id="ico">
         {% assign iconss = site.icons | sort: 'title'  %}
@@ -13,7 +12,7 @@ title: Notion Icons 5.0
       <li class="col mb-4" id="ic">
         <div class="item d-block p-3 text-dark text-decoration-none" style="cursor: pointer;" id="{{ icon.title }}" onclick="downloadIcon(this)">
           <div class="ico text-center rounded">
-           <div class="icon-preview p-2">{{ icon.content }}</div>
+           <img class="icon-preview p-2" src="{{ icon.image }}" alt="{{ icon.name }}" title="{{ icon.name }}">
           </div>
         </div>
         <span style="display: none;">{{ icon.tags }}</span>

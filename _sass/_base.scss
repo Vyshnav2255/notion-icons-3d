@@ -1,5 +1,5 @@
 body {
-    font-family: 'Epilogue', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 // Footer
@@ -10,19 +10,22 @@ body {
 
 .btn{
     margin-bottom: 8px;
-    background-color: #ffe16b;
-    border-color: #000000;
-    color: #000000;
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: all .14s ease-out;
     cursor: pointer;
+    svg{fill: #fff;}
 
-    svg{
-        fill: #000000;
-      }
-
+    &:hover{
+        box-shadow: 0.25rem 0.25rem 0 0 #000;
+        background: linear-gradient(75.96deg, #FFC83A 13.64%, #FF008A 46.53%, #6100FF 78.88%);
+        color: #000;
+        svg{fill: #000;}
     }
-    :hover.btn{
-        box-shadow: 4px 4px 0 #000000;
-        }
+}
 
 .branding {
     display: inline;
@@ -88,7 +91,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Epilogue', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
 }
 
