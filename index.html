@@ -16,11 +16,27 @@ title: Notion Icons 5.0
           </div>
         </div>
         <span style="display: none;">{{ icon.tags }}</span>
-        <button class="btn cpybtn text-break name" style="margin-top: -3px; width: 100%; border-radius: 0 0 .25rem .25rem;" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to Copy" onclick="copyToClipboard(this.parentNode)">{{ icon.title }}</button>
+        <button class="btn cpybtn text-break name" style="margin-top: -3px; width: 100%; border-radius: 0 0 .25rem .25rem;" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to Copy" data-clipboard-text="{{ icon.image | prepend: site.baseurl | prepend: site.url }}">{{ icon.title }}</button>
       </li>
       {% endfor %}
     </ul>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  
+  <script src="/assets/dist/clipboard.min.js"></script>
+  <script>
+    var clipboard = new ClipboardJS('.cpybtn');
+
+    clipboard.on('success', function (e) {
+      console.log(e);
+      $(e.trigger).text("✅ Copied!");
+      e.clearSelection();
+      setTimeout(function() {
+      $(e.trigger).text("Copy");
+    }, 2500);
+    });
+
+    clipboard.on('error', function (e) {
+      console.log(e);
+    });
+  </script>

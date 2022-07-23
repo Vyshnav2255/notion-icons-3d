@@ -21,6 +21,7 @@ body {
 
     &:hover{
         box-shadow: 0.25rem 0.25rem 0 0 #000;
+        transform: translate(-.25rem,-.25rem);
         background: linear-gradient(75.96deg, #FFC83A 13.64%, #FF008A 46.53%, #6100FF 78.88%);
         color: #000;
         svg{fill: #000;}
