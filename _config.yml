@@ -3,7 +3,7 @@ title               : Notion Icons 3D
 description         : >-                               # >- means to ignore newlines until "url:"
                       Beautiful 3D icons for your Notion Workspace
 
-url                 : "https://notion3d.vyshnav.xyz"                               # base hostname & protocol for your site (e.g. http://example.com)
+url                 : "https://notion3d.netlify.app"                               # base hostname & protocol for your site (e.g. http://example.com)
 baseurl             : ""                    # subpath of your site (e.g. /blog) [IMPORTANT: use "" if your are hosting at https://username.github.io directly]
 repository          : Vyshnav2255/notion-icons-v5
 
