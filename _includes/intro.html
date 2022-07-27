@@ -1,8 +1,9 @@
 <div class="px-3 text-center intro">
-    <h2 class="gradient" style="margin-bottom: 1rem;">{{ site.description }}</h2>
+    <h2 class="gradient" style="margin-bottom: 1.25rem;">{{ site.description }}</h2>
     <p class="text-center mb-5">
-    {% include elements/iconbtn.html link="/get-started" text="Get started" icon="check" %}
-    {% include elements/iconbtn.html link="https://www.buymeacoffee.com/vyshnav" text="Buy Me a Coffee" icon="coffee" %}
+    {% include elements/iconbtn.html link="/get-started" text="Get started" icon="compass" %}
+    {% include elements/iconbtn-sec.html link="/icon-packs" text="Other Icon Packs" icon="link" %}
+    {% include elements/iconbtn-sec.html link="https://www.buymeacoffee.com/vyshnav" text="Buy Me a Coffee" icon="coffee" %}
     </p>
 
     {% assign share-url = page.url | prepend: site.baseurl | prepend: site.url %}
@@ -18,8 +19,5 @@
         <a class="links" href="mailto:notionv5@vyshnav.xyz">
             <span>Report an Issue</span>
         </a>
-    </p>
-    <p class="text-center mb-5">
-        {% include elements/iconbtn.html link="/icon-packs" text="Other Icon Packs" icon="link" %}
     </p>
 </div>
