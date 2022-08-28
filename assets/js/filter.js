@@ -1,43 +1,39 @@
-// Get all the svgs on the page
-const svgs = document.getElementsByClassName("feather")
+// Get all the icons on the page on script start
+const icons = document.getElementsByClassName('icon-preview')
 
-const changeColor = (color) => {
-        
-        // Iterate through the svgs and change the stroke color
-        for(let i = 0; i < svgs.length; i++) {
-            
-                svgs[i].style.stroke = color
-
-            }
-    }
-
-
-  // Funtion that generates the dataUrl
-  const generateUrl = (element) => {
-
-    // serialize and convert the svg into a dataUrl
-    const theSerializer = new XMLSerializer()
-    const preData = theSerializer.serializeToString(element)
-    const dataUrl = `data:image/svg+xml,${encodeURIComponent(preData)}`
-
-    return dataUrl
+// Functions that generates the image urls with the changed attributes
+const getColorChanged = (sourcePath, color) => {
+    // Get the current color and replace the string
+    const currentColor = sourcePath.split('/').at(-2)
+    const newSource = sourcePath.replaceAll(currentColor, color)
+    return newSource
 }
 
-// Function that downloads the SVG
-const downloadIcon = async (e) => {
-        
-        // get the svg element from the div
-        const svg = await e.getElementsByTagName("svg")
+const getAlignmentChanged = (sourcePath, alignment) => {
+   // Get the current alignment and replace the string
+   const currentAlignment = soucePath.split('/').at(-3)
+   const newSource = sourcePath.replaceAll(currentAlignment, alignment)
+   return newSource
+}
 
-        // generate the dataUrl
-        const dataUrl = generateUrl(svg[0])
-        
-        // create a downloadable element
-        const theLink = document.createElement('a')
-        theLink.href = dataUrl
-        theLink.download = e.id
-        theLink.click()
-    }
+// Functions that makes the changes
+function changeColor(color) {
+    // Iterate through the icons and change the source
+    icons.forEach((icon) => {
+        const currentSource = icon.src
+        const newSource = getColorChanges(currentSource, color)
+        icon.src = newSource
+    })
+}
+
+function changeAlignment(alignment) {
+    // Iterate through the icons and change the source
+    icons.forEach((icon) => {
+        const currentSource = icon.src
+        const newSource = getAlignmentChanged(currentSource, alignment)
+        icon.src = newSource
+    })
+}
 
 // Function that copies the svg
 const copyToClipboard = async (element) => {
