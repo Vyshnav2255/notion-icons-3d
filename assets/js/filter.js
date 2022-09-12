@@ -1,5 +1,8 @@
-// Get all the icons on the page on script start
-const icons = document.getElementsByClassName('icon-preview')
+// Get all the icons on the page on page load
+let icons
+window.onload(() => {
+    icons = document.getElementsByClassName('icon-preview')
+})
 
 // Functions that generates the image urls with the changed attributes
 const getColorChanged = (sourcePath, color) => {
@@ -9,10 +12,10 @@ const getColorChanged = (sourcePath, color) => {
     return newSource
 }
 
-const getAlignmentChanged = (sourcePath, alignment) => {
-   // Get the current alignment and replace the string
-   const currentAlignment = soucePath.split('/').at(-3)
-   const newSource = sourcePath.replaceAll(currentAlignment, alignment)
+const getAngleChanged = (sourcePath, angle) => {
+   // Get the current angle and replace the string
+   const currentAngle = soucePath.split('/').at(-3)
+   const newSource = sourcePath.replaceAll(currentAngle, angle)
    return newSource
 }
 
@@ -26,11 +29,11 @@ function changeColor(color) {
     })
 }
 
-function changeAlignment(alignment) {
+function changeAngle(angle) {
     // Iterate through the icons and change the source
     icons.forEach((icon) => {
         const currentSource = icon.src
-        const newSource = getAlignmentChanged(currentSource, alignment)
+        const newSource = getAngleChanged(currentSource, angle)
         icon.src = newSource
     })
 }
