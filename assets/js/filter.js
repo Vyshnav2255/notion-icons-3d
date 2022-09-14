@@ -14,7 +14,7 @@ const getColorChanged = (sourcePath, color) => {
 
 const getAngleChanged = (sourcePath, angle) => {
    // Get the current angle and replace the string
-   const currentAngle = soucePath.split('/').at(-3)
+   const currentAngle = sourcePath.split('/').at(-3)
    const newSource = sourcePath.replaceAll(currentAngle, angle)
    return newSource
 }
@@ -24,7 +24,7 @@ function changeColor(color) {
     // Iterate through the icons and change the source
     icons.forEach((icon) => {
         const currentSource = icon.src
-        const newSource = getColorChanges(currentSource, color)
+        const newSource = getColorChanged(currentSource, color)
         icon.src = newSource
     })
 }
