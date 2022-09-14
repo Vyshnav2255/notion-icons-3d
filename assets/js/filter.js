@@ -1,7 +1,7 @@
 // Get all the icons on the page on page load
 let icons
-window.onload(() => {
-    icons = document.getElementsByClassName('icon-preview')
+window.addEventListener('load', () => {
+    icons = [...document.getElementsByClassName('icon-preview')]
 })
 
 // Functions that generates the image urls with the changed attributes
