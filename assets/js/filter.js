@@ -41,21 +41,22 @@ function changeAngle(angle) {
 // Function that copies the svg
 const copyToClipboard = async (element) => {
 
-    // The svg
-    const svg = await element.getElementsByTagName("svg")[0]
-
     // The button
     const btn = await element.getElementsByTagName("button")[0]
     const theText = await btn.innerText
 
     // Generate the dataUrl and write it to the clipboard
-    const dataUrl = generateUrl(svg)
-    navigator.clipboard.writeText(dataUrl)
+    const theSource = await fetch(element.getElementsByTagName("img")[0].href)
+    const imageBlob = await theSource.blob()
+    await navigator.clipboard.write([
+        new ClipboardItem({
+          [blob.type]: imageBlob
+        })
+      ])
 
     // Show message
     btn.innerText = "✅ Copied!"
     setTimeout(() => btn.innerText = theText, 2500)
-
 }
 
 // Function that downloads the SVG
