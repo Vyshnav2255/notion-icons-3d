@@ -57,3 +57,16 @@ const copyToClipboard = async (element) => {
     setTimeout(() => btn.innerText = theText, 2500)
 
 }
+
+// Function that downloads the SVG
+const downloadIcon = async (e) => {
+
+    // get the image's url
+    const theURL = await e.getElementsByTagName("img")[0].href
+    
+    // create a downloadable element
+    const theLink = document.createElement('a')
+    theLink.href = imageURL
+    theLink.download = e.id + "-icon.png"
+    theLink.click()
+}
