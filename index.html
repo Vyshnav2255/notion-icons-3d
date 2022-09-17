@@ -26,18 +26,18 @@ title: Notion Icons 5.0
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="/assets/dist/clipboard.min.js"></script>
   <script>
-    var clipboard = new ClipboardJS('.cpybtn');
+    // var clipboard = new ClipboardJS('.cpybtn');
 
-    clipboard.on('success', function (e) {
-      console.log(e);
-      $(e.trigger).text("✅ Copied!");
-      e.clearSelection();
-      setTimeout(function() {
-      $(e.trigger).text("Copy");
-    }, 2500);
-    });
+    // clipboard.on('success', function (e) {
+    //   console.log(e);
+    //   $(e.trigger).text("✅ Copied!");
+    //   e.clearSelection();
+    //   setTimeout(function() {
+    //   $(e.trigger).text("Copy");
+    // }, 2500);
+    // });
 
-    clipboard.on('error', function (e) {
-      console.log(e);
-    });
+    // clipboard.on('error', function (e) {
+    //   console.log(e);
+    // });
   </script>
