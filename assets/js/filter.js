@@ -46,7 +46,7 @@ const copyToClipboard = async (element) => {
     const theText = await btn.innerText
 
     // Generate the dataUrl and write it to the clipboard
-    const theSource = await fetch(element.getElementsByTagName("img")[0].href)
+    const theSource = await fetch(element.getElementsByTagName("img")[0].src)
     const imageBlob = await theSource.blob()
     await navigator.clipboard.write([
         new ClipboardItem({
@@ -63,7 +63,7 @@ const copyToClipboard = async (element) => {
 const downloadIcon = async (e) => {
 
     // get the image's url
-    const theURL = await e.getElementsByTagName("img")[0].href
+    const theURL = await e.getElementsByTagName("img")[0].src
     
     // create a downloadable element
     const theLink = document.createElement('a')
