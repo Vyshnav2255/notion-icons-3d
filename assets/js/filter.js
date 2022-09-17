@@ -47,8 +47,8 @@ const generateUrl = async (element) => {
 
     // Read the blob using FileReader API
     const fileReader = new FileReader()
-    fileReader.onloadend = async () => {
-        const dataUrl = await fileReader.result
+    fileReader.onloadend = () => {
+        const dataUrl = fileReader.result
         return dataUrl
     }
     fileReader.readAsDataURL(theBlob)
