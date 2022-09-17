@@ -38,25 +38,35 @@ function changeAngle(angle) {
     })
 }
 
-// Function that copies the svg
+  // Funtion that generates the dataUrl
+const generateUrl = (element) => {
+
+    // serialize and convert the svg into a dataUrl
+    const theSerializer = new XMLSerializer()
+    const preData = theSerializer.serializeToString(element)
+    const dataUrl = `data:image/png+xml,${encodeURIComponent(preData)}`
+
+    return dataUrl
+}
+
+// Function that copies the image
 const copyToClipboard = async (element) => {
+
+    // The img
+    const img = await element.getElementsByTagName("img")[0]
 
     // The button
     const btn = await element.getElementsByTagName("button")[0]
     const theText = await btn.innerText
 
     // Generate the dataUrl and write it to the clipboard
-    const theSource = await fetch(element.getElementsByTagName("img")[0].src)
-    const imageBlob = await theSource.blob()
-    await navigator.clipboard.write([
-        new ClipboardItem({
-          [blob.type]: imageBlob
-        })
-      ])
+    const dataUrl = generateUrl(img)
+    navigator.clipboard.writeText(dataUrl)
 
     // Show message
     btn.innerText = "✅ Copied!"
     setTimeout(() => btn.innerText = theText, 2500)
+
 }
 
 // Function that downloads the SVG
