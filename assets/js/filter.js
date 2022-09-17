@@ -66,7 +66,7 @@ const downloadIcon = async (e) => {
     
     // create a downloadable element
     const theLink = document.createElement('a')
-    theLink.href = imageURL
+    theLink.href = theURL
     theLink.download = e.id + "-icon.png"
     theLink.click()
 }
