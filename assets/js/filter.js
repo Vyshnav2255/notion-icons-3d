@@ -41,8 +41,6 @@ function changeAngle(angle) {
   // Funtion that generates the dataUrl
 const generateUrl = async (element) => {
 
-    let dataUrl
-
     // Fetch image blob
     const theSource = await fetch(element.src)
     const theBlob = await theSource.blob()
@@ -50,11 +48,10 @@ const generateUrl = async (element) => {
     // Read the blob using FileReader API
     const fileReader = new FileReader()
     fileReader.onloadend = async () => {
-        dataUrl = await fileReader.result
+        const dataUrl = await fileReader.result
+        return dataUrl
     }
     fileReader.readAsDataURL(theBlob)
-
-    return dataUrl
 }
 
 // Function that copies the image
