@@ -39,12 +39,20 @@ function changeAngle(angle) {
 }
 
   // Funtion that generates the dataUrl
-const generateUrl = (element) => {
+const generateUrl = async (element) => {
 
-    // serialize and convert the svg into a dataUrl
-    const theSerializer = new XMLSerializer()
-    const preData = theSerializer.serializeToString(element)
-    const dataUrl = `data:image/png+xml,${encodeURIComponent(preData)}`
+    let dataUrl
+
+    // Fetch image blob
+    const theSource = await fetch(element.src)
+    const theBlob = await theSource.blob()
+
+    // Read the blob using FileReader API
+    const fileReader = new FileReader()
+    fileReader.onloadend = async () => {
+        dataUrl = await fileReader.result
+    }
+    fileReader.readAsDataURL(theBlob)
 
     return dataUrl
 }
@@ -66,7 +74,6 @@ const copyToClipboard = async (element) => {
     // Show message
     btn.innerText = "✅ Copied!"
     setTimeout(() => btn.innerText = theText, 2500)
-
 }
 
 // Function that downloads the SVG
