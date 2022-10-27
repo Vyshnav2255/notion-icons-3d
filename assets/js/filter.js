@@ -11,6 +11,9 @@ const changeFocus = (group, button) => {
     const parentDiv = group == "color" ? document.getElementById('color-group') : document.getElementById('angle-group')
 
     let buttons = [...parentDiv.getElementsByTagName('button')]
+    console.log(parentDiv)
+    console.log("-----------------------")
+    console.log(buttons)
     const currentButton = button + "-group"
     
     // Remove the current focus
