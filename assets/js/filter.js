@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
 const changeFocus = (group, button) => {
 
     // Choose the group of buttons
-    const parentDiv = group == "color" ? document.getElementsById('color-group') : document.getElementsById('angle-group')
+    const parentDiv = group == "color" ? document.getElementById('color-group') : document.getElementById('angle-group')
 
     let buttons = [...parentDiv.getElementsByTagName('button')]
     const currentButton = button + "-group"
