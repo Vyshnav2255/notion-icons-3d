@@ -17,6 +17,7 @@ const changeFocus = (group, button) => {
     buttons.forEach((button) => {button.classList.remove('active')})
     
     // Add the focus to the clicked button
+    console.log(group, button, currentButton)
     console.log(document.getElementById(currentButton))
     document.getElementById(currentButton).classList.add('active')
 }
