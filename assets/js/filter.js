@@ -11,14 +11,12 @@ const changeFocus = (group, button) => {
     const parentDiv = group == "color" ? document.getElementById('color-group') : document.getElementById('angle-group')
 
     let buttons = [...parentDiv.getElementsByTagName('button')]
-    const currentButton = button + "-group"
+    const currentButton = button + "-button"
     
     // Remove the current focus
     buttons.forEach((button) => {button.classList.remove('active')})
     
     // Add the focus to the clicked button
-    console.log(group, button, currentButton)
-    console.log(document.getElementById(currentButton))
     document.getElementById(currentButton).classList.add('active')
 }
 
