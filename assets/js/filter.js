@@ -19,6 +19,7 @@ const changeColor = (color) => {
     const theSerializer = new XMLSerializer()
     const preData = theSerializer.serializeToString(element)
     const dataUrl = `data:image/svg+xml,${encodeURIComponent(preData)}`
+    console.log(preData, dataUrl)
 
     return dataUrl
 }
@@ -50,11 +51,10 @@ const copyToClipboard = async (element) => {
     const theText = await btn.innerText
 
     // Generate the dataUrl and write it to the clipboard
-    const dataUrl = generateUrl(svg)
+    const dataUrl = await generateUrl(svg)
     navigator.clipboard.writeText(dataUrl)
 
     // Show message
     btn.innerText = "✅ Copied!"
     setTimeout(() => btn.innerText = theText, 2500)
-
 }
