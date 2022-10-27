@@ -38,23 +38,6 @@ function changeAngle(angle) {
     })
 }
 
-  // Funtion that generates the dataUrl
-const generateUrl = async (element) => {
-
-    // Fetch image blob
-    const theSource = await fetch(element.src)
-    const theBlob = await theSource.blob()
-
-    // Read the blob using FileReader API
-    const fileReader = new FileReader()
-    fileReader.onloadend = () => {
-        const dataUrl = fileReader.result
-        console.log(dataUrl)
-        return dataUrl
-    }
-    fileReader.readAsDataURL(theBlob)
-}
-
 // Function that copies the image
 const copyToClipboard = async (element) => {
 
@@ -66,12 +49,20 @@ const copyToClipboard = async (element) => {
     const theText = await btn.innerText
 
     // Generate the dataUrl and write it to the clipboard
-    const dataUrl = await generateUrl(img)
-    navigator.clipboard.writeText(dataUrl)
+    const theSource = await fetch(img.src)
+    const theBlob = await theSource.blob()
 
-    // Show message
-    btn.innerText = "✅ Copied!"
-    setTimeout(() => btn.innerText = theText, 2500)
+    // Use the FileReader API to generate the image URL
+    const fileReader = new FileReader()
+    fileReader.onloadend = () => {
+        const dataUrl = fileReader.result
+        navigator.clipboard.writeText(dataUrl)
+
+        // Show message
+        btn.innerText = "✅ Copied!"
+        setTimeout(() => btn.innerText = theText, 2500)
+    }
+    fileReader.readAsDataURL(theBlob)
 }
 
 // Function that downloads the SVG
