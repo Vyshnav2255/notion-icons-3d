@@ -49,6 +49,7 @@ const generateUrl = async (element) => {
     const fileReader = new FileReader()
     fileReader.onloadend = () => {
         const dataUrl = fileReader.result
+        console.log(dataUrl)
         return dataUrl
     }
     fileReader.readAsDataURL(theBlob)
@@ -65,7 +66,7 @@ const copyToClipboard = async (element) => {
     const theText = await btn.innerText
 
     // Generate the dataUrl and write it to the clipboard
-    const dataUrl = generateUrl(img)
+    const dataUrl = await generateUrl(img)
     navigator.clipboard.writeText(dataUrl)
 
     // Show message
