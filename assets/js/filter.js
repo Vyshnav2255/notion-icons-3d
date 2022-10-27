@@ -17,10 +17,10 @@ const changeFocus = (group, button) => {
     const currentButton = button + "-group"
     
     // Remove the current focus
-    buttons.forEach((button) => {button.classlist.remove('active')})
+    buttons.forEach((button) => {button.classList.remove('active')})
     
     // Add the focus to the clicked button
-    document.getElementById(currentButton).classlist.add('active')
+    document.getElementById(currentButton).classList.add('active')
 }
 
 // Functions that generates the image urls with the changed attributes
