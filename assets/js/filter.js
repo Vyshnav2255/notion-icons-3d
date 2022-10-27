@@ -1,6 +1,5 @@
 // Get all the svgs on the page
 const svgs = document.getElementsByClassName("feather")
-console.log("the changes are there")
 
 const changeColor = (color) => {
         
@@ -20,7 +19,6 @@ const changeColor = (color) => {
     const theSerializer = new XMLSerializer()
     const preData = theSerializer.serializeToString(element)
     const dataUrl = `data:image/svg+xml,${encodeURIComponent(preData)}`
-    console.log(preData, dataUrl)
 
     return dataUrl
 }
@@ -52,10 +50,11 @@ const copyToClipboard = async (element) => {
     const theText = await btn.innerText
 
     // Generate the dataUrl and write it to the clipboard
-    const dataUrl = await generateUrl(svg)
+    const dataUrl = generateUrl(svg)
     navigator.clipboard.writeText(dataUrl)
 
     // Show message
     btn.innerText = "✅ Copied!"
     setTimeout(() => btn.innerText = theText, 2500)
+
 }
