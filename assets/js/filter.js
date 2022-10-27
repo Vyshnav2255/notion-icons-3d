@@ -1,5 +1,6 @@
 // Get all the svgs on the page
 const svgs = document.getElementsByClassName("feather")
+console.log("the changes are there")
 
 const changeColor = (color) => {
         
