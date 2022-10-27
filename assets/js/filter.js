@@ -4,6 +4,22 @@ window.addEventListener('load', () => {
     icons = [...document.getElementsByClassName('icon-preview')]
 })
 
+// Function that changes the button focus
+const changeFocus = (group, button) => {
+
+    // Choose the group of buttons
+    const parentDiv = group = "color" ? document.getElementsById('color-group') : document.getElementsById('angle-group')
+
+    let buttons = [...parentDiv.getElementsByTagName('button')]
+    const currentButton = button + "-group"
+    
+    // Remove the current focus
+    buttons.forEach((button) => {button.classlist.remove('active')})
+    
+    // Add the focus to the clicked button
+    document.getElementById(currentButton).classlist.add('active')
+}
+
 // Functions that generates the image urls with the changed attributes
 const getColorChanged = (sourcePath, color) => {
     // Get the current color and replace the string
@@ -21,6 +37,9 @@ const getAngleChanged = (sourcePath, angle) => {
 
 // Functions that makes the changes
 function changeColor(color) {
+    // Change the filter-button focus
+    changeFocus('color', color)
+
     // Iterate through the icons and change the source
     icons.forEach((icon) => {
         const currentSource = icon.src
@@ -30,6 +49,9 @@ function changeColor(color) {
 }
 
 function changeAngle(angle) {
+    // Change the filter-button focus
+    changeFocus('angle', angle)
+
     // Iterate through the icons and change the source
     icons.forEach((icon) => {
         const currentSource = icon.src

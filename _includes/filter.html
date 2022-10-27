@@ -1,7 +1,7 @@
 <div class="px-3" style="display: flex; margin-bottom: 2rem; gap: 1rem;">
-  <div class="btn-group" role="group">
 
-    <button type="button" class="btn active" onclick="changeColor('color')">
+  <div class="btn-group" role="group" id="color-group">
+    <button type="button" class="btn active" onclick="changeColor('color')" id="color-button">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.75 2C10.4696 2 9.20176 2.25219 8.01884 2.74218C6.83591 3.23216 5.76108 3.95034 4.85571 4.85571C3.95034 5.76108 3.23216 6.83591 2.74217 8.01884C2.25219 9.20176 2 10.4696 2 11.75L11.75 11.75V2Z" fill="#ED5353"/>
         <path d="M2 11.7502C2 13.0306 2.25219 14.2984 2.74218 15.4814C3.23216 16.6643 3.95034 17.7391 4.85571 18.6445C5.76108 19.5499 6.83591 20.268 8.01884 20.758C9.20176 21.248 10.4696 21.5002 11.75 21.5002L11.75 11.7502H2Z" fill="#FFE16B"/>
@@ -10,7 +10,7 @@
       </svg>           
     </button>
 
-    <button type="button" class="btn" onclick="changeColor('gradient')">
+    <button type="button" class="btn" onclick="changeColor('gradient')" id="gradient-button">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="11.75" cy="11.75" r="9.75" fill="url(#paint0_linear_16_13)"/>
         <defs>
@@ -22,7 +22,7 @@
         </defs>
       </svg>        
     </button>
-    <button type="button" class="btn" onclick="changeColor('premium')">
+    <button type="button" class="btn" onclick="changeColor('premium')" id="premium-button">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="11.75" cy="11.75" r="9.75" fill="url(#paint0_linear_16_23)"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0575 19.9302L3.56985 6.44248C4.31546 5.29568 5.29568 4.31546 6.44248 3.56985L19.9302 17.0575C19.1846 18.2043 18.2043 19.1846 17.0575 19.9302Z" fill="url(#paint1_linear_16_23)"/>
@@ -39,18 +39,19 @@
       </svg>        
     </button>
   </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn" onclick="changeAngle('dynamic')">
+
+  <div class="btn-group" role="group" id="angle-group">
+    <button type="button" class="btn active" onclick="changeAngle('dynamic')" id="dynamic-button">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M3.36218 17.2974C2.51774 16.99 2.08235 16.0563 2.3897 15.2119L6.70263 3.36217C7.00998 2.51773 7.94369 2.08234 8.78813 2.38969L20.6378 6.70262C21.4823 7.00997 21.9176 7.94368 21.6103 8.78812L17.2974 20.6378C16.99 21.4822 16.0563 21.9176 15.2119 21.6103L3.36218 17.2974Z"/>
       </svg>      
     </button>
-    <button type="button" class="btn" onclick="changeAngle('front')">
+    <button type="button" class="btn" onclick="changeAngle('front')" id="front-button">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.5 3H4.5C3.67157 3 3 3.67157 3 4.5V19.5C3 20.3284 3.67157 21 4.5 21H19.5C20.3284 21 21 20.3284 21 19.5V4.5C21 3.67157 20.3284 3 19.5 3Z"/>
       </svg>      
     </button>
-    <button type="button" class="btn" onclick="changeAngle('iso')">
+    <button type="button" class="btn" onclick="changeAngle('iso')" id="iso-button">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M21.5531 6.63749C21.5506 6.63749 21.5483 6.6365 21.5465 6.63474C21.5447 6.63299 21.5438 6.6306 21.5438 6.62811C21.4083 6.39741 21.2142 6.2066 20.9813 6.07499L12.7313 1.43436C12.5077 1.30957 12.256 1.24405 12 1.24405C11.744 1.24405 11.4923 1.30957 11.2688 1.43436L3.01876 6.07499C2.78581 6.2066 2.59176 6.39741 2.45626 6.62811C2.45626 6.6306 2.45527 6.63299 2.45351 6.63474C2.45175 6.6365 2.44937 6.63749 2.44688 6.63749V6.65624C2.31727 6.87467 2.24924 7.12413 2.25001 7.37811V16.6219C2.25048 16.8891 2.3219 17.1514 2.45696 17.382C2.59203 17.6126 2.7859 17.8032 3.01876 17.9344L11.2688 22.575C11.4765 22.6883 11.7074 22.7524 11.9438 22.7625H12.075C12.3052 22.7509 12.5297 22.6868 12.7313 22.575L20.9813 17.9344C21.2141 17.8032 21.408 17.6126 21.543 17.382C21.6781 17.1514 21.7495 16.8891 21.75 16.6219V7.37811C21.7514 7.11813 21.6834 6.86248 21.5531 6.63749ZM12.0844 11.1375L4.53751 6.93749L12 2.73749L19.4719 6.93749L12.0844 11.1375ZM20.25 16.6219L12.7594 20.8406L12.8344 12.4406L20.25 8.22186V16.6219Z"/>
       </svg>      
