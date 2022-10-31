@@ -124,8 +124,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .active {
     background: #000 !important;
-    svg{fill: #fff !important;}
 }
+
+.active svg {fill: #fff !important;} 
 
 .btn-group{
     border: 1px solid #000;
@@ -144,8 +145,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .active {
     background: #000 !important;
-    svg{fill: #fff !important;}
 }
+
+.active svg {fill: #fff !important;}
 
 .btn-sec{
     background-color: #fff;
