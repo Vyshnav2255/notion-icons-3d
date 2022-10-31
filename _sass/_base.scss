@@ -122,13 +122,14 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent;
 }
 
+.active {
+    background: #000 !important;
+    svg{fill: #fff;}
+}
+
 .btn-group{
     border: 1px solid #000;
     border-radius: .25rem;
-    .active {
-        background: #000 !important;
-        svg{fill: #fff;}
-    }
     .btn{
         margin-bottom: 0;
         border: 0;
@@ -139,6 +140,11 @@ h1, h2, h3, h4, h5, h6 {
             svg{fill: #fff;}
         }
     }
+}
+
+.active {
+    background: #000 !important;
+    svg{fill: #fff;}
 }
 
 .btn-sec{
