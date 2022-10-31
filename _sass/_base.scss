@@ -7,6 +7,11 @@ body {
     text-decoration: none !important;
 }
 
+.active {
+    background: #000 !important;
+}
+
+.active svg {fill: #fff !important;}
 
 .btn{
     margin-bottom: 8px;
@@ -122,12 +127,6 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent;
 }
 
-.active {
-    background: #000 !important;
-}
-
-.active svg {fill: #fff !important;} 
-
 .btn-group{
     border: 1px solid #000;
     border-radius: .25rem;
@@ -142,12 +141,6 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
-
-.active {
-    background: #000 !important;
-}
-
-.active svg {fill: #fff !important;}
 
 .btn-sec{
     background-color: #fff;
