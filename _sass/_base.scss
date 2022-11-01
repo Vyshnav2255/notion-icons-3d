@@ -7,6 +7,11 @@ body {
     text-decoration: none !important;
 }
 
+.active {
+    background: #000 !important;
+}
+
+.active svg {fill: #fff !important;}
 
 .btn{
     margin-bottom: 8px;
