@@ -1,7 +1,7 @@
 <div class="px-3" style="display: flex; margin-bottom: 2rem; gap: 1rem;">
 
   <div class="btn-group" role="group" id="color-group">
-    <button type="button" class="btn active" onclick="changeColor('color')" id="color-button">
+    <button type="button" class="btn active" onclick="changeColor('color')" id="color-button" data-toggle="tooltip" data-placement="bottom" data-original-title="Color">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.75 2C10.4696 2 9.20176 2.25219 8.01884 2.74218C6.83591 3.23216 5.76108 3.95034 4.85571 4.85571C3.95034 5.76108 3.23216 6.83591 2.74217 8.01884C2.25219 9.20176 2 10.4696 2 11.75L11.75 11.75V2Z" fill="#ED5353"/>
         <path d="M2 11.7502C2 13.0306 2.25219 14.2984 2.74218 15.4814C3.23216 16.6643 3.95034 17.7391 4.85571 18.6445C5.76108 19.5499 6.83591 20.268 8.01884 20.758C9.20176 21.248 10.4696 21.5002 11.75 21.5002L11.75 11.7502H2Z" fill="#FFE16B"/>
@@ -10,7 +10,7 @@
       </svg>           
     </button>
 
-    <button type="button" class="btn" onclick="changeColor('gradient')" id="gradient-button">
+    <button type="button" class="btn" onclick="changeColor('gradient')" id="gradient-button" data-toggle="tooltip" data-placement="bottom" data-original-title="Gradient">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="11.75" cy="11.75" r="9.75" fill="url(#paint0_linear_16_13)"/>
         <defs>
@@ -22,7 +22,7 @@
         </defs>
       </svg>        
     </button>
-    <button type="button" class="btn" onclick="changeColor('premium')" id="premium-button">
+    <button type="button" class="btn" onclick="changeColor('premium')" id="premium-button" data-toggle="tooltip" data-placement="bottom" data-original-title="Premium">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="11.75" cy="11.75" r="9.75" fill="url(#paint0_linear_16_23)"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0575 19.9302L3.56985 6.44248C4.31546 5.29568 5.29568 4.31546 6.44248 3.56985L19.9302 17.0575C19.1846 18.2043 18.2043 19.1846 17.0575 19.9302Z" fill="url(#paint1_linear_16_23)"/>
@@ -41,20 +41,22 @@
   </div>
 
   <div class="btn-group" role="group" id="angle-group">
-    <button type="button" class="btn active" onclick="changeAngle('dynamic')" id="dynamic-button">
+    <button type="button" class="btn active" onclick="changeAngle('dynamic')" id="dynamic-button" data-toggle="tooltip" data-placement="bottom" data-original-title="Dynamic">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.36218 17.2974C2.51774 16.99 2.08235 16.0563 2.3897 15.2119L6.70263 3.36217C7.00998 2.51773 7.94369 2.08234 8.78813 2.38969L20.6378 6.70262C21.4823 7.00997 21.9176 7.94368 21.6103 8.78812L17.2974 20.6378C16.99 21.4822 16.0563 21.9176 15.2119 21.6103L3.36218 17.2974Z"/>
-      </svg>      
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.38976 15.2121C2.08241 16.0566 2.5178 16.9903 3.36224 17.2976L15.2119 21.6105C16.0564 21.9179 16.9901 21.4825 17.2974 20.6381L21.6104 8.78838C21.9177 7.94394 21.4823 7.01023 20.6379 6.70288L8.78819 2.38995C7.94375 2.0826 7.01004 2.51799 6.70269 3.36243L2.38976 15.2121ZM8.23168 3.91894L3.91875 15.7686L15.7684 20.0816L20.0814 8.23187L8.23168 3.91894Z"/>
+        </svg>
     </button>
-    <button type="button" class="btn" onclick="changeAngle('front')" id="front-button">
+    <button type="button" class="btn" onclick="changeAngle('front')" id="front-button" data-toggle="tooltip" data-placement="bottom" data-original-title="Front">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19.5 3H4.5C3.67157 3 3 3.67157 3 4.5V19.5C3 20.3284 3.67157 21 4.5 21H19.5C20.3284 21 21 20.3284 21 19.5V4.5C21 3.67157 20.3284 3 19.5 3Z"/>
-      </svg>      
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4.50024C3 3.67182 3.67157 3.00024 4.5 3.00024H19.5C20.3284 3.00024 21 3.67182 21 4.50024V19.5002C21 20.3287 20.3284 21.0002 19.5 21.0002H4.5C3.67157 21.0002 3 20.3287 3 19.5002V4.50024ZM19.5 4.50024H4.5V19.5002H19.5V4.50024Z"/>
+        </svg>
     </button>
-    <button type="button" class="btn" onclick="changeAngle('iso')" id="iso-button">
+    <button type="button" class="btn" onclick="changeAngle('iso')" id="iso-button" data-toggle="tooltip" data-placement="bottom" data-original-title="Iso">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21.5531 6.63749C21.5506 6.63749 21.5483 6.6365 21.5465 6.63474C21.5447 6.63299 21.5438 6.6306 21.5438 6.62811C21.4083 6.39741 21.2142 6.2066 20.9813 6.07499L12.7313 1.43436C12.5077 1.30957 12.256 1.24405 12 1.24405C11.744 1.24405 11.4923 1.30957 11.2688 1.43436L3.01876 6.07499C2.78581 6.2066 2.59176 6.39741 2.45626 6.62811C2.45626 6.6306 2.45527 6.63299 2.45351 6.63474C2.45175 6.6365 2.44937 6.63749 2.44688 6.63749V6.65624C2.31727 6.87467 2.24924 7.12413 2.25001 7.37811V16.6219C2.25048 16.8891 2.3219 17.1514 2.45696 17.382C2.59203 17.6126 2.7859 17.8032 3.01876 17.9344L11.2688 22.575C11.4765 22.6883 11.7074 22.7524 11.9438 22.7625H12.075C12.3052 22.7509 12.5297 22.6868 12.7313 22.575L20.9813 17.9344C21.2141 17.8032 21.408 17.6126 21.543 17.382C21.6781 17.1514 21.7495 16.8891 21.75 16.6219V7.37811C21.7514 7.11813 21.6834 6.86248 21.5531 6.63749ZM12.0844 11.1375L4.53751 6.93749L12 2.73749L19.4719 6.93749L12.0844 11.1375ZM20.25 16.6219L12.7594 20.8406L12.8344 12.4406L20.25 8.22186V16.6219Z"/>
-      </svg>      
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2636 1.42952C11.4878 1.30111 11.7416 1.23353 12 1.23353C12.2584 1.23353 12.5122 1.30111 12.7364 1.42952L20.986 6.06994C21.2168 6.201 21.4089 6.3906 21.5431 6.61961C21.6772 6.84862 21.7486 7.10894 21.75 7.37434L21.75 7.37837L21.75 16.6221H20.9999L21.75 16.6262C21.7486 16.8916 21.6772 17.1519 21.5431 17.3809C21.4089 17.6099 21.2168 17.7995 20.986 17.9305L20.9833 17.9321L12.7362 22.571C12.5121 22.6994 12.2583 22.767 12 22.767C11.7417 22.767 11.4879 22.6994 11.2638 22.571L3.01668 17.9321L3.01402 17.9305C2.78323 17.7995 2.59108 17.6099 2.45695 17.3809C2.32281 17.1519 2.25144 16.8915 2.25001 16.6262L2.25 16.6221V7.37434C2.25143 7.10895 2.32281 6.84862 2.45695 6.61961C2.59108 6.3906 2.78323 6.201 3.01402 6.06995L3.01668 6.06843L11.2636 1.42952ZM20.25 16.6185V7.38199C20.2499 7.38048 20.2495 7.37902 20.2487 7.37771C20.2479 7.37637 20.2468 7.37525 20.2455 7.37445C20.2454 7.3744 20.2456 7.3745 20.2455 7.37445L12 2.73634L3.75473 7.3743C3.75465 7.37435 3.75482 7.37425 3.75473 7.3743C3.75342 7.3751 3.75206 7.37638 3.75127 7.37771C3.75051 7.37902 3.75007 7.38049 3.75 7.382V16.6185C3.75007 16.62 3.75051 16.6215 3.75127 16.6228C3.75206 16.6241 3.75316 16.6252 3.75448 16.626C3.75456 16.6261 3.7544 16.626 3.75448 16.626L12 21.2642L20.2453 16.6262C20.2453 16.6261 20.2452 16.6262 20.2453 16.6262C20.2466 16.6254 20.2479 16.6241 20.2487 16.6228C20.2495 16.6215 20.2499 16.62 20.25 16.6185Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.44806 6.62883C2.64973 6.26703 3.10652 6.13722 3.46832 6.33889L12.0809 11.1397L20.5265 6.34187C20.8866 6.13728 21.3444 6.26338 21.549 6.62353C21.7536 6.98369 21.6275 7.44151 21.2674 7.64611L12.4549 12.6524C12.227 12.7818 11.9481 12.7829 11.7193 12.6553L2.738 7.6491C2.3762 7.44742 2.24639 6.99064 2.44806 6.62883Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0907 11.2503C12.5049 11.2538 12.8378 11.5924 12.8343 12.0066L12.75 22.0191C12.7465 22.4333 12.4079 22.7662 11.9937 22.7627C11.5795 22.7592 11.2465 22.4206 11.25 22.0064L11.3344 11.9939C11.3379 11.5797 11.6765 11.2468 12.0907 11.2503Z"/>
+        </svg>              
     </button>
   </div>
 </div>
