@@ -27,7 +27,7 @@ $dark-900: #121212;
  
 .branding{
     .text{
-      fill: white;
+      fill: #fff;
     }
 }
 
@@ -47,22 +47,22 @@ $dark-900: #121212;
 }
 
   .links{
-    color: #d4d4d4;
+    color: #fff;
 
     svg{
-        fill: #d4d4d4;
+        fill: #fff;
     }
     &:hover{
-      text-decoration-color: #d4d4d4;
+      text-decoration-color: #fff;
     }
   }
 
   hr{
-    background: #d4d4d4;
+    background: #fff;
   }
 
   .search-box{
-    border-color: white;
+    border-color: #fff;
   }
 
   input{
