@@ -1,5 +1,6 @@
+![img](/assets/card.png)
 # Notion Icons 3D
-A 3D icons library for Notion workspace based on the 3DIcons project by Vijay Verma.
+A gorgeous 3D icons library for Notion workspace based on the 3DIcons project by Vijay Verma.
 
 **Table of Contents**
   - [Tech Stack](#tech-stack)
