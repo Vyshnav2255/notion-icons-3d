@@ -37,3 +37,8 @@ The site should now be available at http://0.0.0.0:4000/
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/vyshnav)
 
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/vyshnavg1)
+
+## Credits
+
+- [Vijay Verma](http://vjy.me/)
+- [Mohammed Shaz](https://github.com/mo-shaz)
